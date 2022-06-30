@@ -4,14 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="./style.css">
-  <title>𝕋𝕚𝕔 𝕋𝕒𝕔 𝕋𝕠𝕒</title>
+  <title>Tic Tac Toa</title>
 </head>
 
 <body>
-  <div style="font-size: 10vw; text-align: center;font-weight: bold">𝕋𝕚𝕔 𝕋𝕒𝕔 𝕋𝕠𝕒</div>
+  <br />
+  <div style="font-size: 10vw; text-align: center;font-weight: bold;font-style: italic;">Tic Tac Toa</div>
   <br />
   <br />
-  <div class="game-board" style="justify-content: center">
+  <div id="wall" style="text-align: center"><img src="./wall.jpg" style="max-width: 80vw;"></div>
+  <div id="board" class="game-board" style="justify-content: center; display: none">
     <div id="3b1" class="box" onclick="start('3b1')"></div>
     <div id="3b2" class="box" onclick="start('3b2')"></div>
     <div id="3b3" class="box" onclick="start('3b3')"></div>
@@ -21,6 +23,28 @@
     <div id="1b1" class="box" onclick="start('1b1')"></div>
     <div id="1b2" class="box" onclick="start('1b2')"></div>
     <div id="1b3" class="box" onclick="start('1b3')"></div>
+  </div>
+  <div id="play" class="buttons">
+    <button class="btn-hover color-1" style="font-size: 5vw;" onclick="run()">Play</button>
+  </div>
+  <div id="result"></div>
+  <div id="rules" style="display: none;padding : 25px;max-width: 90vw; text-align: left">
+    <b><u>Rules of Tic-Tac-Toe</u></b>
+    <br />
+    <br />
+    1. Play occurs on a 3 by 3 grid of 9 squares.
+    <br />
+    <br />
+    2. You have the chance to turn squares to crosses "X"
+    <br />
+    <br />
+    3. A row is any three squares on the grid, adjacent diagonally, vertically or horizontally.
+    <br />
+    <br />
+    4. If you places three crosses X in a raw, you wins.
+    <br />
+    <br />
+    5. If the spaces are all filled and there is no winner, the game ends in a draw.
   </div>
   <script src="./game.js"></script>
 </body>
