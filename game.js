@@ -130,9 +130,7 @@ function display(ocps, color) {
   }
 }
 
-function isSubset(arr1, arr2, m, n)
-
-{
+function isSubset(arr1, arr2, m, n) {
 
   let i = 0;
 
