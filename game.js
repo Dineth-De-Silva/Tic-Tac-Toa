@@ -41,6 +41,7 @@ function start(b) {
   if (begin && !end) {
     if (document.getElementById(b).ocp !== true) {
       document.getElementById(b).innerText = "X"
+      document.getElementById(b).style.backgroundColor = "#e2e8f0"
       document.getElementById(b).ocp = true
       brain()
     }
@@ -62,6 +63,7 @@ function brain() {
     var empty = nocps.length
     const secret = Math.floor(Math.random() * empty)
     document.getElementById(nocps[secret]).innerText = "O"
+    document.getElementById(nocps[secret]).style.backgroundColor = "whitesmoke"
     document.getElementById(nocps[secret]).ocp = true
     datamining()
     if (checker(oocps.sort(), oocps.length)) {
