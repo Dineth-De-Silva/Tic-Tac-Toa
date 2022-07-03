@@ -34,7 +34,6 @@ function run() {
   begin = true;
   document.getElementById("play").style.display = "none";
   document.getElementById("rules").style.display = "block";
-  document.getElementById("restart").style.display = "block";
 }
 
 function start(b) {
@@ -53,7 +52,7 @@ function brain() {
     end = true;
     console.log("x is the winner")
     display(wocps, "#62bd69")
-  } else if (nocps.length !== 0) {
+  } else if (nocps.length !== null) {
     var empty = nocps.length
     const secret = Math.floor(Math.random() * empty)
     document.getElementById(nocps[secret]).innerText = "O"
@@ -128,11 +127,12 @@ function checker(ocps, y) {
 function display(ocps, color) {
   for (var i = 0; i < ocps.length; i++) {
     document.getElementById(ocps[i]).style.color = color;
-    document.getElementById(ocps[i]).style.border = "2px solid black";
   }
 }
 
-function isSubset(arr1, arr2, m, n) {
+function isSubset(arr1, arr2, m, n)
+
+{
 
   let i = 0;
 
