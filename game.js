@@ -34,6 +34,7 @@ function run() {
   begin = true;
   document.getElementById("play").style.display = "none";
   document.getElementById("rules").style.display = "block";
+  document.getElementById("restart").style.display = "block";
 }
 
 function start(b) {
@@ -50,8 +51,13 @@ function brain() {
   datamining()
   if (checker(xocps.sort(), xocps.length)) {
     end = true;
+    party.confetti(document.getElementById("board"), {
+      count: 60
+    })
+    document.getElementById("result").innerHTML = "<br/>You won 😇"
+    document.getElementById("result").style.color = "#3aa346"
     console.log("x is the winner")
-    display(wocps, "#62bd69")
+    display(wocps, "#3aa346")
   } else if (nocps.length !== null) {
     var empty = nocps.length
     const secret = Math.floor(Math.random() * empty)
@@ -60,6 +66,8 @@ function brain() {
     datamining()
     if (checker(oocps.sort(), oocps.length)) {
       end = true
+      document.getElementById("result").innerHTML = "<br/>You lose 😖"
+      document.getElementById("result").style.color = "#c61a09"
       console.log("o is the winner")
       display(wocps, "#c61a09")
     }
@@ -127,6 +135,7 @@ function checker(ocps, y) {
 function display(ocps, color) {
   for (var i = 0; i < ocps.length; i++) {
     document.getElementById(ocps[i]).style.color = color;
+    document.getElementById(ocps[i]).style.borderColor = "black";
   }
 }
 

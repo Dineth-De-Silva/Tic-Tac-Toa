@@ -4,15 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
   <title>Tic Tac Toa</title>
 </head>
 
 <body>
   <br />
-  <div style="font-size: 10vw; text-align: center;font-weight: bold;font-style: italic;">Tic Tac Toa</div>
+  <div style="font-size: 10vw; text-align: center;font-weight: bold"><u>Tic Tac Toa</u></div>
   <br />
   <br />
-  <div id="wall" style="text-align: center"><img src="./wall.jpg" style="max-width: 80vw;"></div>
+  <div id="wall" style="text-align: center">
+    <br/>
+    <img src="./wall.jpg" style="max-width: 80vw;"></div>
   <div id="board" class="game-board" style="justify-content: center; display: none">
     <div id="3b1" class="box" onclick="start('3b1')"></div>
     <div id="3b2" class="box" onclick="start('3b2')"></div>
@@ -24,10 +27,13 @@
     <div id="1b2" class="box" onclick="start('1b2')"></div>
     <div id="1b3" class="box" onclick="start('1b3')"></div>
   </div>
+  <div id="result" style="text-align: center;font-size: 30px; font-weight: bolder"></div>
   <div id="play" class="buttons">
     <button class="btn-hover color-1" style="font-size: 5vw;" onclick="run()">Play</button>
   </div>
-  <div id="result"></div>
+  <div id="restart" style="display: none" class="buttons">
+    <button class="btn-hover color-8" style="font-size: 5vw;" onclick="location.reload()">Restart</button>
+  </div>
   <div id="rules" style="display: none;padding : 25px;max-width: 90vw; text-align: left">
     <b><u>Rules of Tic-Tac-Toe</u></b>
     <br />
