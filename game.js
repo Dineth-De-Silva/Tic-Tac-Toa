@@ -58,7 +58,7 @@ function brain() {
     document.getElementById("result").style.color = "#3aa346"
     console.log("x is the winner")
     display(wocps, "#3aa346")
-  } else if (nocps.length !== null) {
+  } else if (nocps.length !== 0) {
     var empty = nocps.length
     const secret = Math.floor(Math.random() * empty)
     document.getElementById(nocps[secret]).innerText = "O"
@@ -74,7 +74,8 @@ function brain() {
     }
   } else {
     console.log("draw")
-    display(xocps.concat(ocps), "yellow")
+    display(xocps.concat(oocps), "orange")
+    document.getElementById("result").innerHTML = "<br/>Draw 😑"
     end = true
   }
   console.info("x:" + xocps)
