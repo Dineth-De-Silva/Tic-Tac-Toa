@@ -20,9 +20,6 @@ const h = ["1b3", "2b2", "3b1"]
 var begin = false
 var end = false
 
-const mr = 3
-const mc = 3
-
 var xocps = []
 var oocps = []
 var nocps = []
@@ -56,7 +53,6 @@ function brain() {
     })
     document.getElementById("result").innerHTML = "<br/>You won 😇"
     document.getElementById("result").style.color = "#3aa346"
-    console.log("x is the winner")
     display(wocps, "#3aa346")
   } else if (nocps.length !== 0) {
     var empty = nocps.length
@@ -69,26 +65,21 @@ function brain() {
       end = true
       document.getElementById("result").innerHTML = "<br/>You lose 😖"
       document.getElementById("result").style.color = "#c61a09"
-      console.log("o is the winner")
       display(wocps, "#c61a09")
     }
   } else {
-    console.log("draw")
     display(xocps.concat(oocps), "orange")
     document.getElementById("result").innerHTML = "<br/>Draw 😑"
     end = true
   }
-  console.info("x:" + xocps)
-  console.info("o:" + oocps)
-  console.info("n:" + nocps)
 }
 
 function datamining() {
   xocps = []
   oocps = []
   nocps = []
-  for (var rc = 1; rc <= mr; rc++) {
-    for (var cc = 1; cc <= mc; cc++) {
+  for (var rc = 1; rc <= 3; rc++) {
+    for (var cc = 1; cc <= 3; cc++) {
       var key = rc.toString() + "b" + cc.toString()
       if (document.getElementById(key).innerText === "X") {
         xocps.push(key)
