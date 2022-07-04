@@ -33,7 +33,6 @@ function run() {
   document.getElementById("board").style.display = "grid"
   begin = true;
   document.getElementById("play").style.display = "none";
-  document.getElementById("rules").style.display = "block";
   document.getElementById("restart").style.display = "block";
 }
 

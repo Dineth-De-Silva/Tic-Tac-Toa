@@ -6,8 +6,8 @@
 
 .game-board {
   display: grid;
-  grid-template-rows: 25vw 25vw 25vw;
-  grid-template-columns: 25vw 25vw 25vw;
+  grid-template-rows: 28vw 28vw 28vw;
+  grid-template-columns: 28vw 28vw 28vw;
 }
 
 .box {
@@ -20,18 +20,18 @@
 }
 
 .buttons {
-  margin: 20px;
   text-align: center;
+  padding: 40px;
 }
 
 .btn-hover {
+  font-size: 5vw;
   font-weight: 600;
   color: #fff;
   cursor: pointer;
-  padding: 10px;
-  padding-right: 20px;
-  padding-left: 20px;
-  margin: 20px;
+  padding: 20px;
+  padding-right: 40px;
+  padding-left: 40px;
   text-align: center;
   border: none;
   background-size: 300% 100%;

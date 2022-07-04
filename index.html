@@ -10,12 +10,15 @@
 
 <body>
   <br />
-  <div style="font-size: 10vw; text-align: center;font-weight: bold"><u>Tic Tac Toa</u></div>
+  <div style="font-size: 12vw; text-align: center;font-weight: bold"><u>Tic Tac Toa</u></div>
+  <br />
+  <br />
   <br />
   <br />
   <div id="wall" style="text-align: center">
     <br />
-    <img src="./wall.jpg" style="max-width: 80vw;">
+    <br />
+    <img src="./wall.jpg" style="min-width: 85vw;border:10px solid; border-radius: 50%">
   </div>
   <div id="board" class="game-board" style="justify-content: center; display: none">
     <div id="3b1" class="box" onclick="start('3b1')"></div>
@@ -28,33 +31,20 @@
     <div id="1b2" class="box" onclick="start('1b2')"></div>
     <div id="1b3" class="box" onclick="start('1b3')"></div>
   </div>
-  <div id="result" style="text-align: center;font-size: 30px; font-weight: bolder"></div>
+  <br />
+  <div id="result" style="text-align: center;font-size: 6vw; font-weight: bolder"></div>
+  <br />
+  <br />
   <div id="play" class="buttons">
-    <button class="btn-hover color-1" style="font-size: 5vw;" onclick="run()">Play</button>
+    <button class="btn-hover color-1" style="color: black" onclick="run()">Play</button>
   </div>
   <div id="restart" style="display: none" class="buttons">
-    <button class="btn-hover color-8" style="font-size: 5vw;" onclick="location.reload()">Restart</button>
+    <button class="btn-hover color-8" onclick="location.reload()">Restart</button>
   </div>
-  <div id="rules" style="display: none;padding : 25px;max-width: 90vw; text-align: left">
-    <b><u>Rules of Tic-Tac-Toe</u></b>
-    <br />
-    <br />
-    1. Play occurs on a 3 by 3 grid of 9 squares.
-    <br />
-    <br />
-    2. You have the chance to turn squares to crosses "X"
-    <br />
-    <br />
-    3. A row is any three squares on the grid, adjacent diagonally, vertically or horizontally.
-    <br />
-    <br />
-    4. If you places three crosses X in a raw, you wins.
-    <br />
-    <br />
-    5. If the spaces are all filled and there is no winner, the game ends in a draw.
-  </div>
+  <br />
+  <br />
   <footer>
-    <div style="background-color: darkgray;padding: 5px;text-align: center; color: whitesmoke">Copyright © 2022 by Dineth De Silva</div>
+    <div style="background-color: darkgray;border-radius: 50px;margin: 25px;padding: 5px;text-align: center; font-size: 4vw">Copyright © 2022 by Dineth De Silva</div>
   </footer>
   <script src="./game.js"></script>
 </body>
