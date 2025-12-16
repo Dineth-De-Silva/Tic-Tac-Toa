@@ -2,31 +2,77 @@
   font-family: "Pixel Game";
   src: url("./Pixel\ Game.otf");
 }
-
 :root {
   --red: #c61a09;
   --blue: #0000ff;
+  --gray: #cbccceff;
 }
 
 body {
   font-family: "Pixel Game";
 }
-
 #title {
   margin-top: 5vw;
   font-size: 20vw;
   text-align: center;
   margin-bottom: 5vw;
 }
-
-.container {
+.page {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
+.button {
+  font-family: "Pixel Game";
+  font-size: 8vw;
+  cursor: pointer;
+}
 
-.left-div,
-.right-div {
+/* Start page items */
+#start_left_div,
+#start_right_div {
+  padding: 2vw;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#start_left_title {
+  font-size: 6vw;
+}
+#start_left_list {
+  font-size: 4vw;
+  list-style-type: square;
+}
+.start_right_q {
+  font-size: 6vw;
+}
+#start_right_grid_1 {
+  display: grid;
+  grid-template-columns: 10vw 10vw;
+  grid-template-rows: 10vw;
+  gap: 2vw;
+}
+#start_right_grid_2 {
+  display: grid;
+  grid-template-columns: 10vw;
+  grid-template-rows: 10vw;
+}
+.start_right_box {
+  border: 1vw solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 10vw;
+}
+.start_right_box:hover {
+  cursor: pointer;
+  background-color: var(--gray);
+}
+
+.game-left-div,
+.game-right-div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,62 +91,4 @@ body {
   justify-content: center;
   font-weight: bold;
   font-size: 10vw;
-}
-
-.buttons {
-  text-align: center;
-  padding: 40px;
-}
-
-.btn-hover {
-  font-size: 10vw;
-  font-weight: 600;
-  color: #fff;
-  cursor: pointer;
-  padding: 20px;
-  padding-right: 40px;
-  padding-left: 40px;
-  text-align: center;
-  border: none;
-  background-size: 300% 100%;
-
-  border-radius: 50px;
-  -moz-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-
-.btn-hover:hover {
-  background-position: 100% 0;
-  -moz-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-
-.btn-hover:focus {
-  outline: none;
-}
-
-.btn-hover.color-1 {
-  background-image: linear-gradient(
-    to right,
-    #25aae1,
-    #40e495,
-    #30dd8a,
-    #2bb673
-  );
-  box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
-}
-
-.btn-hover.color-8 {
-  background-image: linear-gradient(
-    to right,
-    #29323c,
-    #485563,
-    #2b5876,
-    #4e4376
-  );
-  box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
 }

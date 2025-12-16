@@ -29,35 +29,48 @@
     <!--Pages-->
 
     <!--Initial page-->
-    <div id="start_page" class="container">
-      <!-- Two blocks (in either side of desktop mode) -->
-      <div class="left-div">
+    <div id="start_page" class="page">
+      <div id="start_left_div">
         <div>
-          <p style="font-size: 4vw">Instructions for the player :-</p>
-          <ul style="font-size: 3vw; list-style-type: square">
-            <li>soefhbsjudf sdfgsfdg</li>
-            <li>udgfusd sdfhshudf sdfhsudhfus</li>
+          <span id="start_left_title">Instructions for the player :-</span>
+          <br />
+          <ul id="start_left_list">
+            <li>First choose your prefered mark (X or O)</li>
+            <li>Check the checkbox if you wish to play first</li>
+            <li>Click on the play button to start the game</li>
+            <li>Click on any empty box to place your mark</li>
+            <li>The game will automatically place the computer's mark</li>
+            <li>
+              The player who gets 3 in a row, column or diagonal at first wins
+              the game!
+            </li>
+            <li>Good luck! :)</li>
           </ul>
         </div>
       </div>
-      <div class="right-div">
+      <div id="start_right_div">
         <div>
-          <p style="font-size: 4vw">Chose your mark :-</p>
-          <button>X</button>
-          <button>O</button>
-          <p style="font-size: 4vw">I will start first</p>
-          <input type="checkbox" />
-          <button style="font-family: Pixel Game" onclick="start()">
-            Play
-          </button>
+          <span class="start_right_q">Choose your mark :-</span>
+          <br />
+          <div id="start_right_grid_1">
+            <div class="start_right_box">X</div>
+            <div class="start_right_box">O</div>
+          </div>
+          <br />
+          <span class="start_right_q">I will start first</span>
+          <br />
+          <div id="start_right_grid_2">
+            <div class="start_right_box">X</div>
+          </div>
+          <br />
+          <button class="button" onclick="start()">Play</button>
         </div>
       </div>
     </div>
 
     <!--Game page-->
-    <div id="game_page" class="container">
-      <!-- Two blocks (in either side of desktop mode) -->
-      <div class="left-div">
+    <div id="game_page" class="page">
+      <div class="game-left-div">
         <div id="board" class="game-board" style="justify-content: center">
           <div id="3b1" class="box" onclick="user_move('3b1')"></div>
           <div id="3b2" class="box" onclick="user_move('3b2')"></div>
@@ -70,7 +83,7 @@
           <div id="1b3" class="box" onclick="user_move('1b3')"></div>
         </div>
       </div>
-      <div class="right-div">
+      <div class="game-right-div">
         <div
           id="result"
           style="text-align: center; font-size: 6vw; font-weight: bolder"
@@ -85,7 +98,12 @@
         </div>
       </div>
     </div>
+    <br />
 
+    <!-- Footer -->
+
+    <hr />
+    <div>Hello Everyone</div>
     <script src="./utils.js"></script>
     <script src="./state_func.js"></script>
     <script src="./algorithm.js"></script>

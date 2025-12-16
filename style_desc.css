@@ -6,22 +6,62 @@
     text-align: center;
     margin-bottom: 1vw;
   }
-  .game-board {
-    display: grid;
-    grid-template-rows: 10vw 10vw 10vw;
-    grid-template-columns: 10vw 10vw 10vw;
-  }
-  .container {
+  .page {
     flex-direction: row;
     justify-content: space-between;
- 
+  }
+  .button {
+    font-family: "Pixel Game";
+    font-size: 5vw;
+    cursor: pointer;
   }
 
-  .left-div,
-  .right-div {
+  /* Start page items */
+  #start_left_div,
+  #start_right_div {
+    padding: 2vw;
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  #start_left_title {
+    font-size: 3vw;
+  }
+  #start_left_list {
+    font-size: 2vw;
+    list-style-type: square;
+  }
+  .start_right_q {
+    font-size: 4vw;
+  }
+  #start_right_grid_1 {
+    display: grid;
+    grid-template-columns: 4vw 4vw;
+    grid-template-rows: 4vw;
+    gap: 2vw;
+  }
+  #start_right_grid_2 {
+    display: grid;
+    grid-template-columns: 4vw;
+    grid-template-rows: 4vw;
+  }
+  .start_right_box {
+    border: 0.5vw solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 4vw;
+  }
+  .start_right_box:hover {
+    cursor: pointer;
+    background-color: var(--gray);
+  }
+
+  .game-board {
+    display: grid;
+    grid-template-rows: 10vw 10vw 10vw;
+    grid-template-columns: 10vw 10vw 10vw;
   }
 }
