@@ -80,24 +80,28 @@ body {
   cursor: pointer;
 }
 
+/* Game page items */
 .game-left-div,
 .game-right-div {
+  flex: 1;
+  padding: 2vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.game-board {
+#board {
   display: grid;
   grid-template-rows: 25vw 25vw 25vw;
   grid-template-columns: 25vw 25vw 25vw;
 }
-
 .box {
-  border: 5px solid;
+  border: 1vw solid;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
-  font-size: 10vw;
+  font-size: 20vw;
+}
+#game_status {
+  font-size: 6vw;
+  text-align: center;
 }

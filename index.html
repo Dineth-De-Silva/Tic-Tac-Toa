@@ -80,7 +80,7 @@
             ></div>
           </div>
           <br />
-          <button class="button" onclick="start()">Play</button>
+          <button class="button" onclick="start()">PLAY</button>
         </div>
       </div>
     </div>
@@ -88,7 +88,7 @@
     <!--Game page-->
     <div id="game_page" class="page">
       <div class="game-left-div">
-        <div id="board" class="game-board" style="justify-content: center">
+        <div id="board" style="justify-content: center">
           <div id="3b1" class="box" onclick="user_move('3b1')"></div>
           <div id="3b2" class="box" onclick="user_move('3b2')"></div>
           <div id="3b3" class="box" onclick="user_move('3b3')"></div>
@@ -101,26 +101,14 @@
         </div>
       </div>
       <div class="game-right-div">
-        <div
-          id="result"
-          style="text-align: center; font-size: 6vw; font-weight: bolder"
-        ></div>
-        <div id="play" class="buttons">
-          <button class="btn-hover color-1" onclick="run()">Play</button>
-        </div>
-        <div id="restart" style="display: none" class="buttons">
-          <button class="btn-hover color-8" onclick="location.reload()">
-            Restart
-          </button>
+        <div>
+          <div id="game_status">Game in progress...</div>
+          <br />
+          <button id="re_btn" class="button" onclick="location.reload()">RESTART</button>
         </div>
       </div>
     </div>
-    <br />
-
-    <!-- Footer -->
-
-    <hr />
-    <div>Hello Everyone</div>
+    
     <script src="./js/utils.js"></script>
     <script src="./js/state_func.js"></script>
     <script src="./js/algorithm.js"></script>
