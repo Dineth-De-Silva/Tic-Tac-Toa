@@ -2,14 +2,36 @@
   font-family: "Pixel Game";
   src: url("./Pixel\ Game.otf");
 }
-* {
-  font-family:'Pixel Game';
-  background-color: yellow;
+
+body {
+  font-family: "Pixel Game";
+  background-color: #ffdd00;
 }
+
+#title {
+  margin-top: 5vw;
+  font-size: 20vw;
+  text-align: center;
+  margin-bottom: 5vw;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.left-div,
+.right-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .game-board {
   display: grid;
-  grid-template-rows: 125px 125px 125px;
-  grid-template-columns: 125px 125px 125px;
+  grid-template-rows: 25vw 25vw 25vw;
+  grid-template-columns: 25vw 25vw 25vw;
 }
 
 .box {
@@ -39,18 +61,18 @@
   background-size: 300% 100%;
 
   border-radius: 50px;
-  -moz-transition: all .4s ease-in-out;
-  -o-transition: all .4s ease-in-out;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .btn-hover:hover {
   background-position: 100% 0;
-  -moz-transition: all .4s ease-in-out;
-  -o-transition: all .4s ease-in-out;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .btn-hover:focus {
@@ -58,12 +80,23 @@
 }
 
 .btn-hover.color-1 {
-  background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+  background-image: linear-gradient(
+    to right,
+    #25aae1,
+    #40e495,
+    #30dd8a,
+    #2bb673
+  );
   box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
 }
 
-
 .btn-hover.color-8 {
-  background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+  background-image: linear-gradient(
+    to right,
+    #29323c,
+    #485563,
+    #2b5876,
+    #4e4376
+  );
   box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
 }

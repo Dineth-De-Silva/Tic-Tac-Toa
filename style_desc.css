@@ -1,0 +1,27 @@
+/* Media Query for screens wider than 768px (common breakpoint for tablets/desktops) */
+@media (min-width: 768px) {
+  #title {
+    margin-top: 1vw;
+    font-size: 10vw;
+    text-align: center;
+    margin-bottom: 1vw;
+  }
+  .game-board {
+    display: grid;
+    grid-template-rows: 10vw 10vw 10vw;
+    grid-template-columns: 10vw 10vw 10vw;
+  }
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+ 
+  }
+
+  .left-div,
+  .right-div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

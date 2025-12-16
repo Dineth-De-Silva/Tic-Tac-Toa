@@ -1,56 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta name="title" content="Tic Tac Toa" />
+    <meta name="description" content="The classic game tic tac toa" />
+    <meta name="keywords" content="tictactoa,game,crosshole,3by3,3X3" />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
+    <meta name="author" content="Dineth De Silva" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./style_desc.css" />
+    <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
+    <link rel="icon" href="./favicon.ico" type="image/ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toa</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="./style.css">
-  <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
-  <link rel="icon" href="./favicon.ico" type="image/ico">
-  <title>Tic Tac Toa</title>
-</head>
+  <body>
+    <!-- Tic Tac Toa Heading -->
+    <div id="title">
+      Ti<span style="color: #c61a09">c</span> Ta<span style="color: #c61a09"
+        >c</span
+      >
+      Toa
+    </div>
 
-<body>
-  <br />
-  <br />
-  <div style="font-size: 150px; text-align: center"><u>Tic Tac Toa</u></div>
-  <br />
-  <br />
-  <br />
-  <br />
-  <div id="wall" style="text-align: center">
-    <br />
-    <br />
-    <img src="./wall.jpg" style="min-width: 85vw;border:10px solid">
-  </div>
-  <div id="board" class="game-board" style="justify-content: center; display: none">
-    <div id="3b1" class="box" onclick="start('3b1')"></div>
-    <div id="3b2" class="box" onclick="start('3b2')"></div>
-    <div id="3b3" class="box" onclick="start('3b3')"></div>
-    <div id="2b1" class="box" onclick="start('2b1')"></div>
-    <div id="2b2" class="box" onclick="start('2b2')"></div>
-    <div id="2b3" class="box" onclick="start('2b3')"></div>
-    <div id="1b1" class="box" onclick="start('1b1')"></div>
-    <div id="1b2" class="box" onclick="start('1b2')"></div>
-    <div id="1b3" class="box" onclick="start('1b3')"></div>
-  </div>
-  <br />
-  <div id="result" style="text-align: center;font-size: 6vw; font-weight: bolder"></div>
-  <br />
-  <br /> ,
-  <div id="play" class="buttons">
-    <button class="btn-hover color-1" style="color: black" onclick="run()">Play</button>
-  </div>
-  <div id="restart" style="display: none" class="buttons">
-    <button class="btn-hover color-8" onclick="location.reload()">Restart</button>
-  </div>
-  <br />
-  <br />
-  <footer>
-    <div
-      style="background-color: darkgray;border-radius: 50px;margin: 25px;padding: 5px;text-align: center; font-size: 4vw">
-      Copyright © 2022 by Dineth De Silva</div>
-  </footer>
-  <script src="./game.js"></script>
-</body>
+    <!--Pages-->
 
+    <!--Initial page-->
+    <div id="start_page" class="container">
+      <!-- Two blocks (in either side of desktop mode) -->
+      <div class="left-div">
+        <div>
+          <p style="font-size: 4vw">Instructions for the player :-</p>
+          <ul style="font-size: 3vw; list-style-type: square">
+            <li>soefhbsjudf sdfgsfdg</li>
+            <li>udgfusd sdfhshudf sdfhsudhfus</li>
+          </ul>
+        </div>
+      </div>
+      <div class="right-div">
+        <div>
+          <p style="font-size: 4vw">Chose your mark :-</p>
+          <button>X</button>
+          <button>O</button>
+          <p style="font-size: 4vw">I will start first</p>
+          <input type="checkbox" />
+          <button style="font-family: Pixel Game" onclick="start()">
+            Play
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!--Game page-->
+    <div id="game_page" class="container">
+      <!-- Two blocks (in either side of desktop mode) -->
+      <div class="left-div">
+        <div id="board" class="game-board" style="justify-content: center">
+          <div id="3b1" class="box" onclick="user_move('3b1')"></div>
+          <div id="3b2" class="box" onclick="user_move('3b2')"></div>
+          <div id="3b3" class="box" onclick="user_move('3b3')"></div>
+          <div id="2b1" class="box" onclick="user_move('2b1')"></div>
+          <div id="2b2" class="box" onclick="user_move('2b2')"></div>
+          <div id="2b3" class="box" onclick="user_move('2b3')"></div>
+          <div id="1b1" class="box" onclick="user_move('1b1')"></div>
+          <div id="1b2" class="box" onclick="user_move('1b2')"></div>
+          <div id="1b3" class="box" onclick="user_move('1b3')"></div>
+        </div>
+      </div>
+      <div class="right-div">
+        <div
+          id="result"
+          style="text-align: center; font-size: 6vw; font-weight: bolder"
+        ></div>
+        <div id="play" class="buttons">
+          <button class="btn-hover color-1" onclick="run()">Play</button>
+        </div>
+        <div id="restart" style="display: none" class="buttons">
+          <button class="btn-hover color-8" onclick="location.reload()">
+            Restart
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./utils.js"></script>
+    <script src="./state_func.js"></script>
+    <script src="./algorithm.js"></script>
+    <script src="./game.js"></script>
+  </body>
 </html>
