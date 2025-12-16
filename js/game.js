@@ -6,6 +6,7 @@ document.getElementById("start_page").style.display = "flex";
 // Handle User Preferences
 function userPrefMark(cross) {
   userchosecross = cross;
+  console.log("userchosecross: " + userchosecross);
   if (cross) {
     document.getElementById("cross").style.backgroundColor = "var(--gray)";
     document.getElementById("circle").style.backgroundColor = "var(--white)";
@@ -24,6 +25,7 @@ function userPrefStart() {
     userstartfirst = false;
     document.getElementById("checkbox").innerHTML = "";
   }
+  console.log("userstartfirst: " + userstartfirst);
 }
 
 // Start the game
