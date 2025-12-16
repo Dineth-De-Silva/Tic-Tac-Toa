@@ -3,9 +3,13 @@
   src: url("./Pixel\ Game.otf");
 }
 
+:root {
+  --red: #c61a09;
+  --blue: #0000ff;
+}
+
 body {
   font-family: "Pixel Game";
-  background-color: #ffdd00;
 }
 
 #title {
@@ -40,7 +44,7 @@ body {
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  font-size: 100px;
+  font-size: 10vw;
 }
 
 .buttons {

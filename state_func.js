@@ -11,7 +11,6 @@ const winMoves = [
 ];
 
 // State Variables
-var userMoveNext;
 var userchosecross;
 var userstartfirst;
 var gameOver;

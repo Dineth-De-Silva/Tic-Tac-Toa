@@ -34,7 +34,7 @@ function our_move() {
   switch (result) {
     case "Win":
       console.log("You win");
-     break; 
+      break;
 
     case "Lose":
       console.log("You Lose");
@@ -60,7 +60,6 @@ function user_move(b) {
       case "Win":
         console.log("Youwin");
         break;
-
       case "Lose":
         break;
       case "Draw":
