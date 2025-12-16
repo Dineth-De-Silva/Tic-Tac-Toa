@@ -1,11 +1,12 @@
 @font-face {
   font-family: "Pixel Game";
-  src: url("./Pixel\ Game.otf");
+  src: url("./fonts/Pixel\ Game.otf");
 }
 :root {
   --red: #c61a09;
   --blue: #0000ff;
   --gray: #cbccceff;
+  --white: #ffffff;
 }
 
 body {

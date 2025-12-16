@@ -11,8 +11,8 @@ const winMoves = [
 ];
 
 // State Variables
-var userchosecross;
-var userstartfirst;
+var userchosecross = true;
+var userstartfirst = false;
 var gameOver;
 
 var ocp_a = []; // Occupied

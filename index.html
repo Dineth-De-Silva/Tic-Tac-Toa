@@ -8,8 +8,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="language" content="English" />
     <meta name="author" content="Dineth De Silva" />
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./style_desc.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style_desc.css" />
     <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
     <link rel="icon" href="./favicon.ico" type="image/ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -50,17 +50,35 @@
       </div>
       <div id="start_right_div">
         <div>
-          <span class="start_right_q">Choose your mark :-</span>
+          <span class="start_right_q">Choose your mark</span>
           <br />
           <div id="start_right_grid_1">
-            <div class="start_right_box">X</div>
-            <div class="start_right_box">O</div>
+            <div
+              id="cross"
+              class="start_right_box"
+              onclick="userPrefMark(true)"
+              style="background-color: var(--gray)"
+            >
+              X
+            </div>
+            <div
+              id="circle"
+              class="start_right_box"
+              onclick="userPrefMark(false)"
+            >
+              O
+            </div>
           </div>
           <br />
           <span class="start_right_q">I will start first</span>
           <br />
           <div id="start_right_grid_2">
-            <div class="start_right_box">X</div>
+            <div
+              id="checkbox"
+              class="start_right_box"
+              onclick="userPrefStart()"
+              check="false"
+            ></div>
           </div>
           <br />
           <button class="button" onclick="start()">Play</button>
@@ -104,9 +122,9 @@
 
     <hr />
     <div>Hello Everyone</div>
-    <script src="./utils.js"></script>
-    <script src="./state_func.js"></script>
-    <script src="./algorithm.js"></script>
-    <script src="./game.js"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/state_func.js"></script>
+    <script src="./js/algorithm.js"></script>
+    <script src="./js/game.js"></script>
   </body>
 </html>
