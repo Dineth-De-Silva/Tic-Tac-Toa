@@ -6,11 +6,15 @@
     text-align: center;
     margin-bottom: 1vw;
   }
+  #title:hover {
+    cursor: pointer;
+  }
   .page {
     flex-direction: row;
     justify-content: space-between;
   }
   .button {
+    user-select: none;
     font-family: "Pixel Game";
     font-size: 5vw;
     cursor: pointer;
@@ -47,6 +51,7 @@
     grid-template-rows: 4vw;
   }
   .start_right_box {
+    user-select: none;
     border: 0.5vw solid;
     display: flex;
     align-items: center;
@@ -54,9 +59,13 @@
     font-weight: bold;
     font-size: 4vw;
   }
-  .start_right_box:hover {
+  #circle:hover,
+  #cross:hover {
     cursor: pointer;
     background-color: var(--gray);
+  }
+  #checkbox:hover {
+    cursor: pointer;
   }
 
   .game-board {

@@ -2,6 +2,8 @@
 // View start page
 refresh();
 document.getElementById("start_page").style.display = "flex";
+console.log("userchosecross: " + userchosecross);
+console.log("userstartfirst: " + userstartfirst);
 
 // Handle User Preferences
 function userPrefMark(cross) {
@@ -45,7 +47,7 @@ function our_move() {
   // Random empty box finder
   jobFinish = false;
   while (!jobFinish) {
-    ranID = getRndInteger(1, 4).toString() + "b" + getRndInteger(1, 4);
+    ranID = getRndInteger(1, 3).toString() + "b" + getRndInteger(1, 3).toString();
     if (!document.getElementById(ranID).ocp) {
       b = ranID;
       jobFinish = true;

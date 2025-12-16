@@ -13,7 +13,7 @@ const winMoves = [
 // State Variables
 var userchosecross = true;
 var userstartfirst = false;
-var gameOver;
+var gameOver = false;
 
 var ocp_a = []; // Occupied
 var ocp_o = []; // Occupied our

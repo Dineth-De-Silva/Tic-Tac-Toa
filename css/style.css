@@ -8,7 +8,6 @@
   --gray: #cbccceff;
   --white: #ffffff;
 }
-
 body {
   font-family: "Pixel Game";
 }
@@ -18,12 +17,16 @@ body {
   text-align: center;
   margin-bottom: 5vw;
 }
+#title:hover {
+  cursor: pointer;
+}
 .page {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 .button {
+  user-select: none;
   font-family: "Pixel Game";
   font-size: 8vw;
   cursor: pointer;
@@ -60,6 +63,7 @@ body {
   grid-template-rows: 10vw;
 }
 .start_right_box {
+  user-select: none;
   border: 1vw solid;
   display: flex;
   align-items: center;
@@ -67,9 +71,13 @@ body {
   font-weight: bold;
   font-size: 10vw;
 }
-.start_right_box:hover {
+#circle:hover,
+#cross:hover {
   cursor: pointer;
   background-color: var(--gray);
+}
+#checkbox:hover {
+  cursor: pointer;
 }
 
 .game-left-div,
