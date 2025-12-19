@@ -89,26 +89,28 @@
     <div id="game_page" class="page">
       <div class="game-left-div">
         <div id="board" style="justify-content: center">
-          <div id="3b1" class="box" onclick="user_move('3b1')"></div>
-          <div id="3b2" class="box" onclick="user_move('3b2')"></div>
-          <div id="3b3" class="box" onclick="user_move('3b3')"></div>
-          <div id="2b1" class="box" onclick="user_move('2b1')"></div>
-          <div id="2b2" class="box" onclick="user_move('2b2')"></div>
-          <div id="2b3" class="box" onclick="user_move('2b3')"></div>
           <div id="1b1" class="box" onclick="user_move('1b1')"></div>
           <div id="1b2" class="box" onclick="user_move('1b2')"></div>
           <div id="1b3" class="box" onclick="user_move('1b3')"></div>
+          <div id="2b1" class="box" onclick="user_move('2b1')"></div>
+          <div id="2b2" class="box" onclick="user_move('2b2')"></div>
+          <div id="2b3" class="box" onclick="user_move('2b3')"></div>
+          <div id="3b1" class="box" onclick="user_move('3b1')"></div>
+          <div id="3b2" class="box" onclick="user_move('3b2')"></div>
+          <div id="3b3" class="box" onclick="user_move('3b3')"></div>
         </div>
       </div>
       <div class="game-right-div">
         <div>
           <div id="game_status">Game in progress...</div>
           <br />
-          <button id="re_btn" class="button" onclick="location.reload()">RESTART</button>
+          <button id="re_btn" class="button" onclick="location.reload()">
+            RESTART
+          </button>
         </div>
       </div>
     </div>
-    
+
     <script src="./js/utils.js"></script>
     <script src="./js/state_func.js"></script>
     <script src="./js/algorithm.js"></script>

@@ -1,11 +1,10 @@
-// Game controls
+// Game starts here
 // View start page
 refresh();
 document.getElementById("start_page").style.display = "flex";
 console.log("userchosecross: " + userchosecross);
 console.log("userstartfirst: " + userstartfirst);
 
-// Handle User Preferences
 function userPrefMark(cross) {
   userchosecross = cross;
   console.log("userchosecross: " + userchosecross);
@@ -17,6 +16,7 @@ function userPrefMark(cross) {
     document.getElementById("cross").style.backgroundColor = "var(--white)";
   }
 }
+
 function userPrefStart() {
   document.getElementById("checkbox").check =
     !document.getElementById("checkbox").check;
@@ -43,26 +43,19 @@ function start() {
 
 // Handle Our Moves
 function our_move() {
-  var b;
-  // Random empty box finder
-  jobFinish = false;
-  while (!jobFinish) {
-    ranID = getRndInteger(1, 3).toString() + "b" + getRndInteger(1, 3).toString();
-    if (!document.getElementById(ranID).ocp) {
-      b = ranID;
-      jobFinish = true;
-    }
-  }
+  // Random move algorithm
+  observeBoard();
+  const b = Algorithm();
   if (userchosecross) {
     assignerNormal(b, false, false);
   } else {
     assignerNormal(b, true, false);
   }
-  result = checker();
+  observeBoard();
+  const result = checker();
   switch (result) {
     case "Win":
       console.log("You win");
-      break;
 
     case "Lose":
       console.log("You Lose");
@@ -76,14 +69,16 @@ function our_move() {
 
 // Handle User Moves
 function user_move(b) {
-  if (!document.getElementById(b).ocp && !gameOver) {
+  observeBoard();
+  if (!document.getElementById(b).ocp) {
     // Successful user move
     if (userchosecross) {
       assignerNormal(b, true, true);
     } else {
       assignerNormal(b, false, true);
     }
-    result = checker();
+    observeBoard();
+    const result = checker();
     switch (result) {
       case "Win":
         console.log("Youwin");
@@ -96,8 +91,6 @@ function user_move(b) {
         our_move();
         break;
     }
-  } else if (document.getElementById(b).ocp && !gameOver) {
-    // Show something
   }
 }
 
